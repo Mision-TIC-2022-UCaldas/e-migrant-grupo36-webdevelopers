@@ -1,0 +1,93 @@
+﻿@page
+@model Presentacion.Pages.Migrantes.DetallesModel
+@{ViewData["Title"]="Detalles Migrante";
+}
+<h1>Detalles</h1>
+<h4>Migrante</h4>
+
+<div class="form-horizontal">
+        
+        <hr />
+        
+        <div class="row">
+           <div class="col-md-4">
+               <form method="post">
+                   
+                   <input type="hidden" asp-for="Migrante.Id" />
+                    <div class="form-group">
+                       <label asp-for="Migrante.Nombres" class="control-label"> </label>
+                       <input asp-for="Migrante.Nombres"  class="form-control" readonly/>                       
+                      
+                   </div>
+
+                   <div class="form-group">
+                       <label asp-for="Migrante.Apellidos" class="control-label"> </label>
+                       <input asp-for="Migrante.Apellidos"  class="form-control" readonly/>                       
+                       
+                   </div>
+
+                   
+                   
+                    <div class="form-group">
+                       <label asp-for="Migrante.TipoDocumento" class="control-label"> </label>
+                       <input asp-for="Migrante.TipoDocumento"  class="form-control" readonly/>                       
+                       
+                   </div>
+
+                    <div class="form-group">
+                       <label asp-for="Migrante.Documento" class="control-label"> </label>
+                       <input asp-for="Migrante.Documento"  class="form-control" readonly/>                       
+                       
+                
+                   
+
+                    <div class="form-group">
+                       <label asp-for="Migrante.PaisOrigen" class="control-label"> </label>
+                       <input asp-for="Migrante.PaisOrigen"  class="form-control" readonly/>                       
+                       
+                   </div>
+
+                    <div class="form-group">
+                       <label asp-for="Migrante.FechaNacimiento" class="control-label"> </label>
+                       <input asp-for="Migrante.FechaNacimiento"  class="form-control" readonly/>                       
+                       
+                   </div>
+
+                    <div class="form-group">
+                       <label asp-for="Migrante.CorreoElectronico" class="control-label"> </label>
+                       <input asp-for="Migrante.CorreoElectronico"  class="form-control" readonly/>                       
+                       
+                   </div>
+
+                    <div class="form-group">
+                       <label asp-for="Migrante.Telefono" class="control-label"> </label>
+                       <input asp-for="Migrante.Telefono"  class="form-control" readonly/>                       
+                       
+                   </div>
+
+                   <div class="form-group">
+                       <label asp-for="Migrante.DireccionActual" class="control-label"> </label>
+                       <input asp-for="Migrante.DireccionActual"  class="form-control" readonly/>                       
+                       
+                   </div>
+
+                   <div class="form-group">
+                       <label asp-for="Migrante.Ciudad" class="control-label"> </label>
+                       <input asp-for="Migrante.Ciudad"  class="form-control" readonly/>                       
+                       
+                   </div>
+
+
+
+               </form>
+           </div>
+        </div>
+
+        <div>
+            <a asp-page="Index">Regresar a Migrantes</a>
+        </div> 
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

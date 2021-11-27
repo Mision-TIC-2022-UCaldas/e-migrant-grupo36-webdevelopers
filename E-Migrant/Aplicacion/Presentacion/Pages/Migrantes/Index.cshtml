@@ -1,0 +1,34 @@
+﻿@page
+@model Presentacion.Pages.Migrantes.IndexModel
+@{ViewData["Title"]="Migrantes";
+}
+
+<h1>Listado de Migrantes</h1>
+<p>
+    <a asp-page="Crear" class="btn btn-success"><i class="fas fa-plus"></i> Crear Migrante</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>País de Origen</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var mig in Model.Migrantes)
+        {
+            <tr>
+                <td>@mig.Id </td>
+                <td>@mig.Nombres </td>
+                <td>@mig.PaisOrigen </td>
+                <td>
+                    <a class="btn btn-outline-primary" asp-page="./Editar" asp-route-id="@mig.Id"><i class="fas fa-edit"></i> Editar</a>
+                    <a class="btn btn-danger" asp-page="./Eliminar" asp-route-id="@mig.Id"><i class="fas fa-trash-alt"></i> Eliminar</a>
+                    <a class="btn btn-info" asp-page="./Detalles" asp-route-id="@mig.Id"><i class="fas fa-info"></i> Detalles</a>
+                </td>
+            </tr>
+        }
+    </tbody>   
+</table>
