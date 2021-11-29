@@ -1,0 +1,127 @@
+﻿@page
+@model Presentacion.Pages.Colaboradoras.DetallesModel
+@{ViewData["Title"]="Detalles Colaboradora";
+}
+
+<h1>Detalles</h1>
+<h4>Migrante</h4>
+
+<div class="form-horizontal">
+        
+        <hr />
+        
+        <div class="row">
+           <div class="col-md-4">
+               <form method="post">
+                   
+                   <input type="hidden" asp-for="Colaboradora.Id" />
+                    <div class="form-group">   @*  Clase CSS Para manejo de grupos*@
+                    <label asp-for="Colaboradora.RazonSocial" class="control-label">  </label>
+                    <input asp-for="Colaboradora.RazonSocial" class="form-control" readonly/>
+                    <span asp-validation-for="Colaboradora.RazonSocial" class="text-danger"></span>
+
+                </div>
+
+                <div class="form-group">   @*  Clase CSS Para manejo de grupos*@
+                    <label asp-for="Colaboradora.Nit" class="control-label">  </label>
+                    <input asp-for="Colaboradora.Nit" class="form-control" readonly/>
+                    <span asp-validation-for="Colaboradora.Nit" class="text-danger"></span>
+
+                </div>
+         
+
+              
+                <div class="form-group">   @*  Clase CSS Para manejo de grupos*@
+                    <label asp-for="Colaboradora.Direccion" class="control-label">  </label>
+                    <input asp-for="Colaboradora.Direccion" class="form-control" readonly/>
+                    <span asp-validation-for="Colaboradora.Direccion" class="text-danger"></span>
+
+                </div>
+
+                <div class="form-group">   @*  Clase CSS Para manejo de grupos*@
+                    <label asp-for="Colaboradora.Ciudad" class="control-label">  </label>
+                    <input asp-for="Colaboradora.Ciudad" class="form-control" readonly/>
+                    <span asp-validation-for="Colaboradora.Ciudad" class="text-danger"></span>
+
+                </div>
+
+                <div class="form-group">   @*  Clase CSS Para manejo de grupos*@
+                    <label asp-for="Colaboradora.CorreoElectronico" class="control-label">  </label>
+                    <input asp-for="Colaboradora.CorreoElectronico" class="form-control" readonly/>
+                    <span asp-validation-for="Colaboradora.CorreoElectronico" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">   @*  Clase CSS Para manejo de grupos*@
+                    <label asp-for="Colaboradora.PaginaWeb" class="control-label">  </label>
+                    <input asp-for="Colaboradora.PaginaWeb" class="form-control" readonly/>
+                    <span asp-validation-for="Colaboradora.PaginaWeb" class="text-danger"></span>
+                </div>
+
+                @*
+                <div class="form-group">
+                    <label asp-for="Colaboradora.Sector" class="control-label"></label>
+                     <select asp-for="Colaboradora.Sector" class="form-control" >
+                        <option value="">--Seleccione el sector-- </option>
+                        <option value="Público">Público</option>
+                        <option value="Privado">Privado</option>
+                        <option value="Sin ánimo de lucro">Sin ánimo de lucro</option>
+                        <option value="No gubernamental">No gubernamental</option>
+                        <option value="Otro">Otro</option>
+                        <option value="Indocumentado">Indocumentado</option>
+                    </select>
+                     <span asp-validation-for="Colaboradora.Sector" class="text-danger"></span>
+                </div>
+                *@
+                
+                
+                <div class="form-group">   
+                    <label asp-for="Colaboradora.Sector" class="control-label">  </label>
+                    <input asp-for="Colaboradora.Sector" class="form-control" readonly/>
+                    <span asp-validation-for="Colaboradora.Sector" class="text-danger"></span>
+                </div>
+                
+
+                 @*
+                <div class="form-group">
+                    <label asp-for="Colaboradora.TipoServicios" class="control-label"></label>
+                     <select asp-for="Colaboradora.TipoServicios" class="form-control" >
+                        <option value="">--Seleccione el TipoServicios-- </option>
+                        <option value="Salud">Salud</option>
+                        <option value="Jurídicos">Jurídicos</option>
+                        <option value="Víveres">Víveres</option>
+                        <option value="Comida preparada">Comida preparada</option>
+                        <option value="Empleo">Empleo</option>
+                        <option value="Alojamiento temporal">Alojamiento temporal</option>
+                        <option value="Alojamiento permanente">Alojamiento permanente</option>
+                        <option value="Educación">Educación</option>
+                        <option value="Otros">Otros</option>
+                    </select>
+                     <span asp-validation-for="Colaboradora.TipoServicios" class="text-danger"></span>
+                </div> 
+                *@
+                
+                <div class="form-group">  
+                    <label asp-for="Colaboradora.TipoServicios" class="control-label">  </label>
+                    <input asp-for="Colaboradora.TipoServicios" class="form-control" readonly/>
+                    <span asp-validation-for="Colaboradora.TipoServicios" class="text-danger"></span>
+                </div>
+                
+
+
+               
+
+
+
+               </form>
+           </div>
+        </div>
+
+        <div>
+            <a asp-page="Index">Regresar a Entidades Colaboradoras</a>
+        </div> 
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}
+

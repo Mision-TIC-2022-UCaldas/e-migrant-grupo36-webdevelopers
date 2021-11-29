@@ -1,0 +1,69 @@
+﻿@page
+@model Presentacion.Pages.Ofertas.DetallesModel
+@{ViewData["Title"]="Detalles Oferta";
+}
+
+<h1>Detalles</h1>
+<h4>Migrante</h4>
+
+<div class="form-horizontal">
+        
+        <hr />
+        
+        <div class="row">
+           <div class="col-md-4">
+               <form method="post">
+                   
+                   <input type="hidden" asp-for="Oferta.Id" />
+                    <div asp-validation-summary="ModelOnly" class="text-danger">  </div>
+                   <div class="form-group">
+                       <label asp-for="Oferta.Nombre" class="control-label"> </label>
+                       <input asp-for="Oferta.Nombre"  class="form-control" readonly/>   
+                       <span asp-validation-for="Oferta.Nombre" class="text-danger" > </span>                       
+                   </div>
+
+
+                   <div class="form-group">
+                       <label asp-for="Oferta.MaxMigrantes" class="control-label"> </label>
+                       <input asp-for="Oferta.MaxMigrantes"  class="form-control" readonly/>   
+                       <span asp-validation-for="Oferta.MaxMigrantes" class="text-danger" > </span>                       
+                   </div>
+
+
+                    
+                   <div class="form-group">
+                       <label asp-for="Oferta.FechaInicio" class="control-label"> </label>
+                       <input asp-for="Oferta.FechaInicio"  class="form-control" readonly/>   
+                       <span asp-validation-for="Oferta.FechaInicio" class="text-danger" > </span>                       
+                   </div> 
+
+
+                   <div class="form-group">
+                       <label asp-for="Oferta.FechaFinal" class="control-label"> </label>
+                       <input asp-for="Oferta.FechaFinal"  class="form-control" readonly/>   
+                       <span asp-validation-for="Oferta.FechaFinal" class="text-danger" > </span>                       
+                   </div>
+              
+
+                
+                <div class="form-group">
+                    <label asp-for="Oferta.Estado" class="control-label"></label>
+                     <input asp-for="Oferta.Estado" class="form-control" readonly/>
+                       
+                </div>
+
+
+
+
+               </form>
+           </div>
+        </div>
+
+        <div>
+            <a asp-page="Index">Regresar a Ofertas de Servicios</a>
+        </div> 
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}
