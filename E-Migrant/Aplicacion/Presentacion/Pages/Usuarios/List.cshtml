@@ -1,0 +1,38 @@
+﻿@page
+@model Presentacion.Pages.Usuarios.ListModel
+@{
+    ViewData["Title"] = "Usuarios";
+}
+    <h1>Usuarios</h1>
+    <div class="col-2 text-right">
+        <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Crear" asp-page="./Crear"><i>Crear</i>
+        </a>
+    </div>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Id</th>
+            <th>Usuario</th>
+            <th>Correo</th>
+            <th>Rol</th>
+            <th>Info</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var u in Model.Usuarios)
+        {
+                <tr>
+                    <td>@u.Id</td>
+                    <td>@u.User</td>
+                    <td>@u.Correo</td>
+                    <td>@u.Rol</td>
+                    <td>
+                        <a class="btn btn-outline-primary" asp-page="./Edit" asp-route-UsuarioId="@u.Id"><i class="fas fa-edit"></i> Editar</a>
+                    @*<a class="btn btn-danger" asp-page="./Eliminar" asp-route-id="@u.Id"><i class="fas fa-trash-alt"></i> Eliminar</a> *@
+                        <a class="btn btn-info" asp-page="./Detail" asp-route-correo="@u.Correo"><i class="fas fa-info"></i> Detalles</a>
+                    </td>
+                </tr>
+
+        }
+    </tbody>
+</table>

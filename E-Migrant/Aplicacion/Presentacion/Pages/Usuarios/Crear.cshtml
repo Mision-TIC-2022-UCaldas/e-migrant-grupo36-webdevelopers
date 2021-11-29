@@ -1,0 +1,40 @@
+﻿@page
+@model Presentacion.Pages.Usuarios.CrearModel
+@{
+}
+<main>
+
+    <h1 class="main-title">Registrar Usuario<br></h1>
+    <section class="section-form">
+        <form class="form-form" method="post">
+            <input type="hidden" asp-for="Usuario.Id" />
+            <div class="form-group">
+                <label asp-for="Usuario.Rol" class="control-label"></label>
+                    <select asp-for="Usuario.Rol" class="form-control" >
+                    <option value="">--Seleccione Rol-- </option>
+                    <option value="Administrador">Administrador</option>
+                    <option value="Migrante">Migrante</option>
+                    <option value="GerenteProyecto">Gerente de Proyecto</option>
+                    <option value="UsuarioEntidad">Usuario de Entidad Colaboradora</option>
+                </select>
+            </div>
+    
+            <div class="form-group">
+                <strong><label asp-for="Usuario.Correo">Email</label></strong>
+                <input asp-for="Usuario.Correo" class="form-control">
+                <span class="text-danger" asp-validation-for="Usuario.Correo"></span>
+            </div>
+            <div class="boton-form">
+                <button type="submit" class="btn btn-primary">Guardar</button><br>
+             </div> 
+            
+        </form>
+    </section>
+
+
+    <aside class="container-buttons">
+            <a class="btn table-btn" asp-page="./List" ><i class="fas fa-undo fa-lg"></i><br><b>Return</b></a>
+            <a class="btn table-btn" asp-page="./Detail" asp-route-correo="@Model.Usuario.Correo"><i class="fas fa-eye fa-lg"></i><br><b>Ver Usuario</b></a>
+    </aside>
+
+</main>

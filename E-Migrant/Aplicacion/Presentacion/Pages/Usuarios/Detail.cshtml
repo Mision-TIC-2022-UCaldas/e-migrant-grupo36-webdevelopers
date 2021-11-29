@@ -1,0 +1,36 @@
+﻿@page
+@model Presentacion.Pages.Usuarios.DetailModel
+@{ViewData["Title"]="Detalles Usuario";
+}
+<main>
+    <h1 class="main-title">Detalle de Usuarios</h1>
+
+    <section class="main-section">
+        <div class="container-information">
+            <strong>Usuario</strong><br><br>
+            <table class="table">
+                <tr>
+                    <th>Id</th>
+                    <th>Usuario</th>
+                    <th>Contraseña</th>
+                    <th>Rol</th>
+                    <th>Correo Electrónico</th>
+                </tr>
+                <tr>
+                    <td>@Model.Usuario.Id</td>
+                    <td>@Model.Usuario.User</td>
+                    <td>@Model.Usuario.Contrasena</td>
+                    <td>@Model.Usuario.Rol</td>
+                    <td>@Model.Usuario.Correo</td>
+                </tr>
+            </table>
+        </div> 
+    </section>
+
+    <aside class="container-buttons">
+        <a class="btn table-btn" asp-page="./List"><i class="fas fa-undo fa-lg"></i><br><strong>Return</strong></a>
+        <a class="btn table-btn" asp-page="./Edit"  asp-route-usuarioId="@Model.Usuario.Id"><i class="fas fa-address-book fa-lg"></i><br><b>Editar</b></a>
+        <a class="btn table-btn" asp-page="./Eliminar"  asp-route-idUsuario="@Model.Usuario.Id"><i class="fas fa-trash fa-lg"></i><br><b>Cancelar Cuenta</b></a>
+    </aside>
+
+</main>
