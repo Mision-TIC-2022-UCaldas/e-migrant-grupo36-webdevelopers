@@ -1,0 +1,106 @@
+﻿@page
+@model Presentacion.Pages.Evaluaciones.CrearModel
+@{
+    ViewData["Title"] = "Crear Evaluacion del Aplicativo";
+}
+
+<div class="row">
+    <div class="col-10">
+        <h1>Crear</h1>
+        <h1>Evaluacion del Aplicativo</h1>
+    </div>
+    <div class="col-2 text-right">
+        <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Listar" asp-page="./Index">
+            <i class="fas fa-list-ul"></i>
+        </a>
+    </div>
+    <div class="form-group">
+        <label asp-for="Evalu.Migrante"></label>
+        <select asp-for="MigranteId" name="MigranteId" class="form-control" asp-items="Model.listaMigrantes">
+            @* <option>--- Seleccione su Usuario ---</option> *@
+        </select>
+        <span asp-validation-for="Evalu.Migrante" class="text-danger"></span>
+    </div>
+
+
+</div>
+<form method="post" action="">
+    <input type="hidden" asp-for="Evalu.Id">
+    <div class="form-group">
+        <label asp-for="Evalu.Calificacion" class="control-label"> </label>
+        <select asp-for="Evalu.Calificacion" class="form-control">
+            <option value="">--Seleccione su Calificacion-- </option>
+            <option value="Malo">Malo</option>
+            <option value="Regular">Regular</option>
+            <option value="Bueno">Bueno</option>
+            <option value="Muy Bueno">Muy Bueno</option>
+            <option value="Excelente">Excelente</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Crear" class="btn btn-success" />
+
+    </div>
+
+    @* <button type="submit" class="btn btn-primary btn-block" data-toggle="tooltip" data-placement="top" title="Crear">
+        <i class="fas fa-2x fa-save"></i>
+        </button> *@
+</form>
+<div>
+    <a asp-page="Index">Regresar a Solicitud de Servicios</a>
+</div>
+
+
+
+
+
+@* <h1>Crear</h1>
+    <h4>Evaluacion del Aplicativo</h4>
+    <h3>@ViewData["Mensaje"]</h3>
+
+    <div class="form-horizontal">
+    <hr />
+    <div class="row">
+    <div class=col-md-4>
+    <form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"> </div>
+
+    <div class="form-group">
+    <label asp-for="Evalu.Migrante" class="control-label"> </label>
+    <input asp-for="Evalu.Migrante" class="form-control"/>
+    <span asp-validation-for="Evalu.Migrante" class="text-danger"></span>
+
+    </div>
+
+
+    <div class="form-group">
+    <label asp-for="Evalu.Calificacion" class="control-label"> </label>
+    <select asp-for="Evalu.Calificacion" class="form-control" >
+    <option value="">--Seleccione su Calificacion-- </option>
+    <option value="Malo">Malo</option>
+    <option value="Regular">Regular</option>
+    <option value="Bueno">Bueno</option>
+    <option value="Muy Bueno">Muy Bueno</option>
+    <option value="Excelente">Excelente</option>
+    </select>
+    </div>
+
+    <div class="form-group">
+    <input type="submit" value="Crear" class="btn btn-success" />
+
+    </div>
+
+    </form>
+
+    </div>
+    </div>
+    <div>
+    <a asp-page="Index">Regresar a Solicitud de Servicios</a>
+    </div>
+    </div>
+    @section Scripts{
+    @{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    } *@

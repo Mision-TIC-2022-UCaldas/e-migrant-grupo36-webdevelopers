@@ -1,0 +1,64 @@
+@page
+@model Presentacion.Pages.Novedades.CrearModel
+@{ViewData["Title"]="Crear Novedad de Servicios";
+}
+ 
+<h1>Crear</h1>
+<h4>Novedades</h4>
+<h3>@ViewData["Mensaje"]</h3>
+ 
+<div class="form-horizontal">
+    <hr />
+    <div class="row">  
+        <div class=col-md-4>  
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger">   </div>
+ 
+                @* Campo solicitud fecha *@
+                <div class="form-group">
+                    <label asp-for="Novedad.FechaNovedad" class="control-label">  </label>
+                    <input asp-for="Novedad.FechaNovedad" class="form-control"/>
+                    <span asp-validation-for="Novedad.FechaNovedad" class="text-danger"></span>
+ 
+                </div>
+                @* Campo solicitud dias activo *@
+                <div class="form-group">   @*  Clase CSS Para manejo de grupos*@
+                    <label asp-for="Novedad.NumDiasActivo" class="control-label">  </label>
+                    <input asp-for="Novedad.NumDiasActivo" class="form-control"/>
+                    <span asp-validation-for="Novedad.NumDiasActivo" class="text-danger"></span>
+ 
+                </div>
+ 
+                @* Campo solicitud texto *@
+                <div class="form-group">   @*  Clase CSS Para manejo de grupos*@
+                    <label asp-for="Novedad.TextoExplicacion" class="control-label">  </label>
+                    <input asp-for="Novedad.TextoExplicacion" class="form-control"/>
+                    <span asp-validation-for="Novedad.TextoExplicacion" class="text-danger"></span>
+ 
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Novedad.Estado" class="control-label"></label>
+                     <select asp-for="Novedad.Estado" class="form-control" >
+                        <option value="">--Seleccione documento-- </option>
+                        <option value="Habilitado">Habilitado</option>
+                        <option value="Inhabilitado">Inhabilitado</option>
+                    </select>
+                </div>
+                   
+                <div class="form-group">   @*  Clase CSS Para manejo de grupos *@
+                    <input type="submit" value="Crear" class="btn btn-success" />
+ 
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <a asp-page="Index">Regresar a Novedades</a>
+    </div>
+</div>
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

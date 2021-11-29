@@ -1,0 +1,43 @@
+﻿@page
+@model Presentacion.Pages.Solicitudes.DetallesModel
+@{ViewData["Title"]="Detalles Solicitud";
+}
+<h1>Detalles</h1>
+<h4>Solicitud</h4>
+
+<div class="form-horizontal">
+        
+        <hr />
+        
+        <div class="row">
+           <div class="col-md-4">
+               <form method="post">
+                   
+                   <input type="hidden" asp-for="Solicitud.Id" />
+                    <div class="form-group">
+                       <label asp-for="Solicitud.Categoria" class="control-label"> </label>
+                       <input asp-for="Solicitud.Categoria"  class="form-control" readonly/>                       
+                   </div>
+
+                   <div class="form-group">
+                       <label asp-for="Solicitud.Descripcion" class="control-label"> </label>
+                       <input asp-for="Solicitud.Descripcion"  class="form-control" readonly/>                         
+                   </div>
+
+                    <div class="form-group">
+                       <label asp-for="Solicitud.Prioridad" class="control-label"> </label>
+                       <input asp-for="Solicitud.Prioridad"  class="form-control" readonly/>                       
+                   </div>
+
+               </form>
+           </div>
+        </div>
+
+        <div>
+            <a asp-page="Index">Regresar a Migrantes</a>
+        </div> 
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

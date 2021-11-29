@@ -1,0 +1,33 @@
+﻿@page
+@model Presentacion.Pages.Ofertas.IndexModel
+@{ViewData["Title"]="Oferta de Servicios";
+}
+<h1>Listado de Ofertas de Servicios</h1>
+<p>
+    <a asp-page="Crear" class="btn btn-success"><i class="fas fa-plus"></i> Crear Oferta</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Máximo de Migrantes</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ofe in Model.Ofertas)
+        {
+            <tr>
+                <td>@ofe.Id </td>
+                <td>@ofe.Nombre </td>
+                <td>@ofe.MaxMigrantes </td>
+                <td>
+                    <a class="btn btn-outline-primary" asp-page="./Editar" asp-route-id="@ofe.Id"><i class="fas fa-edit"></i> Editar</a>
+                    <a class="btn btn-danger" asp-page="./Eliminar" asp-route-id="@ofe.Id"><i class="fas fa-trash-alt"></i> Eliminar</a>
+                    <a class="btn btn-info" asp-page="./Detalles" asp-route-id="@ofe.Id"><i class="fas fa-info"></i> Detalles</a>
+                </td>
+            </tr>
+        }
+    </tbody>   
+</table>

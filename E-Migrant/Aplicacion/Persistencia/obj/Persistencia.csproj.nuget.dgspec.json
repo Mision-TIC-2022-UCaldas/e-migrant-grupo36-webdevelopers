@@ -1,0 +1,140 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\CAROLINA\\Hackaton\\28-11-2021-Solicitud.CRUD\\E-Migrant\\Aplicacion\\Persistencia\\Persistencia.csproj": {}
+  },
+  "projects": {
+    "C:\\CAROLINA\\Hackaton\\28-11-2021-Solicitud.CRUD\\E-Migrant\\Aplicacion\\Dominio\\Dominio.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\CAROLINA\\Hackaton\\28-11-2021-Solicitud.CRUD\\E-Migrant\\Aplicacion\\Dominio\\Dominio.csproj",
+        "projectName": "Dominio",
+        "projectPath": "C:\\CAROLINA\\Hackaton\\28-11-2021-Solicitud.CRUD\\E-Migrant\\Aplicacion\\Dominio\\Dominio.csproj",
+        "packagesPath": "C:\\Users\\William Oviedo\\.nuget\\packages\\",
+        "outputPath": "C:\\CAROLINA\\Hackaton\\28-11-2021-Solicitud.CRUD\\E-Migrant\\Aplicacion\\Dominio\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\William Oviedo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.413\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\CAROLINA\\Hackaton\\28-11-2021-Solicitud.CRUD\\E-Migrant\\Aplicacion\\Persistencia\\Persistencia.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\CAROLINA\\Hackaton\\28-11-2021-Solicitud.CRUD\\E-Migrant\\Aplicacion\\Persistencia\\Persistencia.csproj",
+        "projectName": "Persistencia",
+        "projectPath": "C:\\CAROLINA\\Hackaton\\28-11-2021-Solicitud.CRUD\\E-Migrant\\Aplicacion\\Persistencia\\Persistencia.csproj",
+        "packagesPath": "C:\\Users\\William Oviedo\\.nuget\\packages\\",
+        "outputPath": "C:\\CAROLINA\\Hackaton\\28-11-2021-Solicitud.CRUD\\E-Migrant\\Aplicacion\\Persistencia\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\William Oviedo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "C:\\CAROLINA\\Hackaton\\28-11-2021-Solicitud.CRUD\\E-Migrant\\Aplicacion\\Dominio\\Dominio.csproj": {
+                "projectPath": "C:\\CAROLINA\\Hackaton\\28-11-2021-Solicitud.CRUD\\E-Migrant\\Aplicacion\\Dominio\\Dominio.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.413\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

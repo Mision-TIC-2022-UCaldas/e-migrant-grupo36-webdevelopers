@@ -1,0 +1,48 @@
+﻿@page
+@model Presentacion.Pages.Novedades.DetallesModel
+@{ViewData["Title"]="Detalles Novedad";
+}
+<h1>Detalles</h1>
+<h4>Novedad</h4>
+
+<div class="form-horizontal">
+        
+        <hr />
+        
+        <div class="row">
+           <div class="col-md-4">
+               <form method="post">
+                   
+                   <input type="hidden" asp-for="Novedad.Id" />
+                    <div class="form-group">
+                       <label asp-for="Novedad.FechaNovedad" class="control-label"> </label>
+                       <input asp-for="Novedad.FechaNovedad"  class="form-control" readonly/>                       
+                   </div>
+
+                   <div class="form-group">
+                       <label asp-for="Novedad.NumDiasActivo" class="control-label"> </label>
+                       <input asp-for="Novedad.NumDiasActivo"  class="form-control" readonly/>                         
+                   </div>
+
+                    <div class="form-group">
+                       <label asp-for="Novedad.TextoExplicacion" class="control-label"> </label>
+                       <input asp-for="Novedad.TextoExplicacion"  class="form-control" readonly/>                       
+                   </div>
+
+                   <div class="form-group">
+                       <label asp-for="Novedad.Estado" class="control-label"> </label>
+                       <input asp-for="Novedad.Estado"  class="form-control" readonly/>                       
+                   </div>
+
+               </form>
+           </div>
+        </div>
+
+        <div>
+            <a asp-page="Index">Regresar a Migrantes</a>
+        </div> 
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

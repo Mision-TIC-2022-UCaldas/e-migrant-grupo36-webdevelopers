@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "MDx+8V+We4+TPCw+LaAFeLISSS3g8rUm1ep5/CcmKvoCQnl2jPxc3QRkvCY60JdDajUum2LlJjU4HB/YxOnU1g==",
+  "success": true,
+  "projectFilePath": "C:\\CAROLINA\\Hackaton\\28-11-2021-Solicitud.CRUD\\E-Migrant\\Aplicacion\\Dominio\\Dominio.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\William Oviedo\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

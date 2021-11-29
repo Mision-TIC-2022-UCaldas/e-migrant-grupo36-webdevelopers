@@ -1,0 +1,35 @@
+@page
+@model Novedades.Pages.Novedades.IndexModel
+@{ViewData["Title"]="Novedades";
+}
+<h1>Listado de Novedades</h1>
+<p>
+    <a asp-page="Crear" class="btn btn-success"><i class="fas fa-plus"></i> Crear Novedad</a>
+</p>
+ 
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Fecha Novedad</th>
+            <th>Dias Activo</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var nov in Model.Novedades)
+        {
+            <tr>
+                <td>@nov.Id </td>
+                <td>@nov.FechaNovedad </td>
+                <td>@nov.NumDiasActivo </td>
+                <td>@nov.Estado </td>
+                <td>
+                    <a class="btn btn-outline-primary" asp-page="./Editar" asp-route-id="@nov.Id"><i class="fas fa-edit"></i> Editar</a>
+                    @* <a class="btn btn-danger" asp-page="./Eliminar" asp-route-id="@nov.Id"><i class="fas fa-trash-alt"></i> Eliminar</a> *@
+                    <a class="btn btn-info" asp-page="./Detalles" asp-route-id="@nov.Id"><i class="fas fa-info"></i> Detalles</a>
+                </td>
+            </tr>
+        }
+    </tbody>  
+</table>

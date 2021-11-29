@@ -1,0 +1,32 @@
+﻿@page
+@model Presentacion.Pages.Evaluaciones.IndexModel
+@{ViewData["Title"]="Evaluacion del Aplicativo";
+}
+
+<h1>Listado Calificaciones</h1>
+<p>
+    <a asp-page="Crear" class="btn btn-success"><i class="fas fa-plus"></i> Crear Calificacion</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Migrante</th>
+            <th>Calificacion</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var evalu in Model.Evaluaciones)
+        {
+            <tr>
+                <td>@evalu.Id </td>
+                <td>@evalu.Migrante </td>
+                <td>@evalu.Calificacion </td>
+                <td>
+                    <a class="btn btn-info" asp-page="./Detalles" asp-route-id="@evalu.Id"><i class="fas fa-info"></i> Detalles</a>
+                </td>
+            </tr>
+        }
+    </tbody>   
+</table>
